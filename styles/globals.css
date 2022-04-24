@@ -1,3 +1,21 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+:root {
+  --gray-dark: hsl(0, 0%, 14%);
+  --dark: hsl(0, 0%, 21%);
+  --light: hsl(0, 0%, 96%);
+  --primary: hsl(171, 100%, 41%);
+  --warning: hsl(48, 100%, 67%);
+  --danger: hsl(348, 100%, 61%);
+  --black: hsl(0, 0%, 4%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  background-color: var(--dark) !important;
+  color: var(--light) !important;
+}
+
 html,
 body {
   padding: 0;
@@ -13,4 +31,40 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+header {
+  border-radius: 0 !important;
+}
+
+.logo span {
+  margin-right: 10px !important;
+  margin-right: 5px !important;
+  width: fit-content;
+}
+
+.card {
+  padding: 20px;
+}
+
+.card .mainImg {
+  margin: auto;
+  object-fit: contain;
+  max-width: 500px;
+}
+
+.navbar {
+  background-color: white !important;
+  border-bottom: 1px solid gray;
+}
+
+.content-area {
+  text-align: center;
+  padding-top: 40px;
+  min-height: calc(100vh - 221px);
+}
+
+.footer *,
+.footer {
+  background-color: var(--gray-dark) !important;
 }
