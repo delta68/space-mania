@@ -38,7 +38,9 @@ export default function Header() {
               <a className="navbar-link">More</a>
 
               <div className="navbar-dropdown">
-                <a className="navbar-item">Images of Earth</a>
+                <Link href="/earthImages">
+                  <a className="navbar-item">Images of Earth</a>
+                </Link>
                 <Link href="/asteroidTable">
                   <a className="navbar-item">Asteroids</a>
                 </Link>

@@ -44,6 +44,7 @@ header {
 }
 
 .card {
+  text-align: center;
   padding: 20px;
 }
 
@@ -67,4 +68,9 @@ header {
 .footer *,
 .footer {
   background-color: var(--gray-dark) !important;
+}
+
+.asteroidTable {
+  margin: auto;
+  text-align: center;
 }

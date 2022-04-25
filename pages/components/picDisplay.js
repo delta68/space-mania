@@ -4,11 +4,10 @@ import Footer from "./footer";
 export default function PicDisplay({ data }) {
   return (
     <>
-      <Header />
       <div className="card">
         <div className="card-image">
           <figure className="image is-256x256 mainImg">
-            <img src={data.url} alt="Placeholder image" />
+            <img class="lazy-load" src={data.url} alt="Placeholder image" />
           </figure>
         </div>
         <div className="card-content">
@@ -24,7 +23,6 @@ export default function PicDisplay({ data }) {
         <img src={data.url} alt="picture" />
         <p className="floatUp"></p>
       </figure> */}
-      <Footer />
     </>
   );
 }
