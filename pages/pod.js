@@ -1,4 +1,6 @@
 import PicDisplay from "./components/picDisplay";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 const API_KEY = "jnVmmJvgR9jlgrAhreT8VHhyRjXlH3S6NnxZ1Q9p";
 
