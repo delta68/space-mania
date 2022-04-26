@@ -1,5 +1,6 @@
 export default function AsteroidTable({ data }) {
   let obj = [];
+  if (data == "error") return;
   let arr = Object.keys(data["near_earth_objects"]);
   arr.forEach((key, index) => {
     let j = data["near_earth_objects"][key];

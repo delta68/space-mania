@@ -20,4 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  const cards = document.querySelector("#earthImages .card");
+  cards.map((card) => {
+    card.addEventListener("click", () => {});
+  });
 });

@@ -15,13 +15,21 @@ export default function asteroidTable({ data }) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch(
-    `https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=${API_KEY}`
-  );
-  const data = await response.json();
-  return {
-    props: {
-      data: data,
-    },
-  };
+  try {
+    const response = await fetch(
+      `https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=${API_KEY}`
+    );
+    const data = await response.json();
+    return {
+      props: {
+        data: data,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        data: "error",
+      },
+    };
+  }
 }

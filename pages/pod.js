@@ -8,7 +8,11 @@ export default function PicOfDay({ data }) {
   return (
     <>
       <Header />
-      <PicDisplay data={data} />
+      <div className="content-area">
+        <div id="podImage">
+          <PicDisplay data={data} />
+        </div>
+      </div>
       <Footer />
     </>
   );
