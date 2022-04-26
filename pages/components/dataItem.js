@@ -2,7 +2,7 @@ export default function AsteroidTable({ data }) {
   let obj = [];
   if (data == "error") return;
   let arr = Object.keys(data["near_earth_objects"]);
-  arr.forEach((key, index) => {
+  arr.map((key) => {
     let j = data["near_earth_objects"][key];
     j.map((dt) => {
       obj.push({
@@ -46,19 +46,17 @@ export default function AsteroidTable({ data }) {
         </tr>
       </tfoot>
       <tbody>
-        {obj.map((j) => {
+        {obj.map((l) => {
           return (
-            <tr>
-              <td>{j.name}</td>
-              <td>{j.absolute_magnitude_h}</td>
-              <td>{j.diameter}</td>
-              <td>{j.missDistance}</td>
+            <tr key={l.name}>
+              <td>{l.name}</td>
+              <td>{l.absolute_magnitude_h}</td>
+              <td>{l.diameter}</td>
+              <td>{l.missDistance}</td>
               <td>
-                <a href={j.link} target="_blank">
-                  link
-                </a>
+                <a href={l.link}>link</a>
               </td>
-              <td>{j.hazardous ? "True" : "False"}</td>
+              <td>{l.hazardous ? "True" : "False"}</td>
             </tr>
           );
         })}

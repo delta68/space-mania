@@ -21,7 +21,6 @@ export default function EarthImages({ data }) {
             <>
               <a
                 href={`https://epic.gsfc.nasa.gov/archive/natural/${year}/${date[0]}/${date[1]}/png/${element.image}.png`}
-                target="_blank"
               >
                 <PicDisplay data={obj} />
               </a>
